@@ -1,0 +1,19 @@
+{% extends "homepage.html" %}
+
+{% block body%}
+<body>
+<div class="container-popup">
+  {% include "navbar.html" %}
+        <div class="popup" style="margin-top: 5%; width: 35%; ">
+          <img src="{{ url_for('static', filename = 'fotos_posts/{}'.format(foto.imagem)) }}">
+          <div class="div-botao">
+            <a class="botao-arquivo" style="width: fit-content; text-transform: none; text-decoration: none" href="{{ url_for('perfil', id_usuario=foto.id_usuario)}}">
+            Perfil do Usuário
+            </a>
+            <a class="botao-login" style="background-color: #333; width: fit-content; text-transform: none; text-decoration: none" href="{{ url_for('adicionar', id_foto=foto.id) }}">
+            Adicionar
+            </a>
+          </div>
+        </div>
+</div>
+{% endblock %}

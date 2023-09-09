@@ -1,0 +1,18 @@
+{% extends "homepage.html" %}
+
+{% block body %}
+{% include "navbar.html" %}
+
+<body>
+  <div class="container">
+
+    <div class="conteudo">
+      {% for foto in fotos %}
+          <a href="{{ url_for('visualizarfeed', id_foto_compart=foto.id) }}" class="bloco-imagem">
+              <img src="{{ url_for('static', filename = 'fotos_posts/{}'.format(foto.fotos.imagem)) }}">
+          </a>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+{% endblock %}
