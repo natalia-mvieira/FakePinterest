@@ -9,7 +9,7 @@
         {% block titulo %}
             FakePinterest
         {% endblock %}
-    </title> <!-- nome que aparece na aba do site --> <!-- block permite editar em outros html -->
+    </title>
   </head>
 {% block body %}
   <body class="overflow-hidden">
@@ -47,8 +47,8 @@
       <div class="container-popup">
 
         {% block formulario %}
-        <form form method="POST" class="popup"> <!-- pelo método POST, o usuário me envia informações pelo formulário -->
-          {{ form.csrf_token }} <!--trava de segurança para evitar hackers, sempre colocar em formulários -->
+        <form method="POST" class="popup">
+          {{ form.csrf_token }}
           <svg
             height="40"
             viewBox="-3 -3 82 82"
@@ -67,17 +67,17 @@
           <h2>Bem-vindo(a) ao FakePinterest</h2>
 
           <div class="div-input">
-              {{ form.email.label(class="label")}} <!--título-->
+              {{ form.email.label(class="label")}}
               {% if form.email.errors %}
                   {% for erro in form.email.errors %}
                   <p style="color: red">{{ erro }}</p>
                   {% endfor %}
               {% endif %}
-              {{ form.email(class="input") }} <!--campo-->
+              {{ form.email(class="input") }}
           </div>
 
           <div class="div-input">
-            {{ form.senha.label(class="label")}} <!--título-->
+            {{ form.senha.label(class="label")}}
             {% if form.senha.errors and not form.email.errors %}
                 {% for erro in form.senha.errors %}
                 <p style="color: red">{{ erro }}</p>
