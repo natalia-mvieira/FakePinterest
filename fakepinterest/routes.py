@@ -103,8 +103,8 @@ def deletar(id_foto_compart):
     foto_compart = FotoCompartilhada.query.filter_by(id=foto_compart_id.id).first()
     foto = Foto.query.filter_by(id=int(foto_compart.id_foto)).first()
     if foto.id_usuario == current_user.id:
-        Foto.query.filter_by(id=foto.id).delete()
         FotoCompartilhada.query.filter_by(id_foto=foto.id).delete()
+        Foto.query.filter_by(id=foto.id).delete()
         database.session.commit()
     elif foto.id_usuario != current_user.id:
         FotoCompartilhada.query.filter_by(id=int(foto_compart.id)).delete()
