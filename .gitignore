@@ -1,5 +1,6 @@
 instance
 Layout
+gera_chave_secreta.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
