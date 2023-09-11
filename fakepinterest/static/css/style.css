@@ -242,3 +242,17 @@ img {
   display: flex;
   column-gap: 20px;
 }
+
+
+.conteudo-vis {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bloco-img-vis img{
+  border-radius: 20px;
+  max-width: 70vw;
+  max-height: 70vh;
+}

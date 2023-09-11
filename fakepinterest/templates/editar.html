@@ -2,9 +2,9 @@
 
 {% block body%}
 <body>
-<div class="container-popup">
-  {% include "navbar.html" %}
-        <div class="popup" style="margin-top: 5%; width: 35%; ">
+{% include "navbar.html" %}
+<div class="conteudo-vis">
+        <div class="bloco-img-vis">
           <img src="{{ url_for('static', filename = 'fotos_posts/{}'.format(foto.imagem)) }}">
           <div class="div-botao">
             <a class="botao-arquivo" style="width: fit-content; text-transform: none; text-decoration: none" href="{{ url_for('perfil', id_usuario=foto.id_usuario)}}">
