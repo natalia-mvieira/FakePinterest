@@ -10,23 +10,11 @@ O site apresenta as seguintes rotas:
 ### Homepage:
 Onde é feito o processo de login e também permite direcionamento à rota de Criar Conta;
 
-<div align="center">
-    <img src="![homepage](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/5d5e81df-9907-481e-83d1-85124b6299f8)" width="700px"/>
-</div>
-
 ### CriarConta:
 Permite a criação de uma nova conta, com sistema de checagem de senhas e de repetição de e-mail;
 
-<div align="center">
-    <img src="![criar conta](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/bf3c7099-fe29-409b-a299-c005c83b8c30)" width="700px"/>
-</div>
-
 ### Perfil:
 A rota conta com a variável de *id* que permite a visualização do perfil de um usuário específico.
-
-<div align="center">
-    <img src="![Perfil](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/e3d939bf-3fe6-401e-ba23-776902c01877)" width="700px"/>
-</div>
 
 Assim que a conta é criada ou o *login* é realizado, o usuário já é direcionado ao seu próprio perfil. 
 
@@ -42,15 +30,7 @@ Ao clicar na logo FakePinterest, a página é direcionada ao "Feed", onde as ima
 
 Aqui, as imagens aparecerão quando forem adicionadas originalmente e sempre que forem compartilhadas por outros perfis.
 
-<div align="center">
-    <img src="![Feed](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/498a1d69-ed2b-4baa-84d6-675436a3e9d1)" width="700px"/>
-</div>
-
 ### Visualizar:
-
-<div align="center">
-    <img src="![Visualizar feed](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/f14c712d-d6f5-416d-a4bd-3ed491e087c5)" width="700px"/>
-</div>
 
 #### Pelo Feed
 Ao clicar em qualquer imagem no *feed*, o usuário será direcionado a uma página que lhe dará duas opções: ver o perfil que a compartilhou ou fazer a adição da imagem em seu próprio perfil.
@@ -58,23 +38,11 @@ Ao clicar em qualquer imagem no *feed*, o usuário será direcionado a uma pági
 #### Pelo Perfil
 Caso o usuário tenha optado por ver o perfil, ele também pode clicar sobre uma imagem que estiver ali dentro, sendo direcionado a uma nova página de visualização. Nesta, ele também terá a opção de adicionar a foto ou de ver o perfil original que a colocou no site.
 
-<div align="center">
-    <img src="![outro perfil](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/a9646f40-181f-404d-992a-05e59da66530)" width="700px"/>
-</div>
-
 ### Adicionar: 
 Permite o usuário adicionar ao próprio perfil qualquer foto já postada. É o compartilhamento.
 
-<div align="center">
-    <img src="![adicionar](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/619a7639-110f-4b5f-96a8-0cbb8c91a115)" width="700px"/>
-</div>
-
 ### Editar: 
 Quando o usuário atual está vendo o seu próprio perfil, ele pode clicar sobre uma das fotos para visualizar o perfil do qual ele compartilhou a imagem ou pode deletá-la;
-
-<div align="center">
-    <img src="![editar](https://github.com/natalia-mvieira/FakePinterest/assets/144560412/d92af0ae-f484-4570-a222-897f8412a351)" width="700px"/>
-</div>
 
 ### Deletar: 
 Permite que uma imagem seja deletada do perfil.
