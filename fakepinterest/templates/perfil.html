@@ -20,6 +20,11 @@
             {{ form.foto(class="input-arquivo", id="foto") }}
         </label>
         <span id="imagem-arquivo" class=""></span>
+        {% if form.foto.errors %}
+            {% for erro in form.foto.errors %}
+                <span class="text-danger">{{ erro }}</span><br>
+            {% endfor %}
+        {% endif %}
       </div>
       {{ form.botao_confirmacao(class="botao-login") }}
   </form>

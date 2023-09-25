@@ -4,6 +4,7 @@ from fakepinterest.models import Usuario, Foto, FotoCompartilhada
 from flask_login import login_required, login_user, logout_user, current_user
 from fakepinterest.forms import FormLogin, FormCriarConta, FormFoto
 import os
+import secrets
 from werkzeug.utils import secure_filename
 
 @app.route('/', methods=['GET', 'POST'])
@@ -38,7 +39,10 @@ def perfil(id_usuario):
         form_foto = FormFoto()
         if form_foto.validate_on_submit():
             arquivo = form_foto.foto.data
-            nome_seguro = secure_filename(arquivo.filename)
+            codigo = secrets.token_hex(8) #evita erro ao fazer upload de imagens com mesmo nome
+            nome, extensao = os.path.splitext(arquivo.filename)
+            nome_completo = nome + codigo + extensao
+            nome_seguro = secure_filename(nome_completo)
             caminho = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config["UPLOAD_FOLDER"], nome_seguro)
             arquivo.save(caminho)
             foto = Foto(imagem=nome_seguro, id_usuario=id_usuario)
@@ -108,6 +112,8 @@ def deletar(id_foto_compart):
         FotoCompartilhada.query.filter_by(id_foto=foto.id).delete()
         Foto.query.filter_by(id=foto.id).delete()
         database.session.commit()
+        caminho = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config["UPLOAD_FOLDER"], foto.imagem)
+        os.remove(caminho)
     elif foto.id_usuario != current_user.id:
         FotoCompartilhada.query.filter_by(id=int(foto_compart.id)).delete()
         database.session.commit()
