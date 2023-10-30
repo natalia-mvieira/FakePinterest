@@ -92,4 +92,6 @@ Em Foto, estão os dados de todas as imagens adicionadas originalmente.
 
 Em FotoCompartilhada, são armazenadas as informações de quando uma foto foi postada pela primeira vez e também quando uma imagem é compartilhada. Por meio das chaves estrangeiras, ela se conecta à Usuario e à Foto.
 
+
+<s>Observação</s>: este projeto foi feito acompanhando o curso Python Impressionador da Hashtag Treinamentos. O curso forneceu a parte visual do site (front-end). O projeto inicial, guiado pelo curso, sugere a criação de conta, login, adição de uma imagem a partir do computador, visualização do feed e de páginas de outros usuários a partir do id. A possibilidade de visualizar a imagem em outra página, compartilhamento, edição, ver o perfil que a compartilhou e ver o perfil original foram implementações pessoais no projeto, sendo necessário, dentre outras mudanças, a alteração da estrutura do banco de dados.
 Para o visual da página, foi utilizado **CSS** e **HTML**.
