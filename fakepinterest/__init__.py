@@ -5,10 +5,12 @@ from flask_bcrypt import Bcrypt
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv["SQLALCHEMY_DATABASE_URI"]
-app.config["SECRET_KEY"] = os.getenv["SECRET_KEY"]
-app.config["UPLOAD_FOLDER"] = os.getenv["UPLOAD_FOLDER"]
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI")
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+app.config["UPLOAD_FOLDER"] = os.getenv("UPLOAD_FOLDER")
 
 database = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
